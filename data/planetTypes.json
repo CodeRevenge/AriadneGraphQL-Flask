@@ -1,0 +1,18 @@
+[
+  {
+    "_id": 0,
+    "name": "Pequeño"
+  },
+  {
+    "_id": 1,
+    "name": "Rocoso"
+  },
+  {
+    "_id": 2,
+    "name": "Gigante"
+  },
+  {
+    "_id": 3,
+    "name": "Gaseoso"
+  }
+]

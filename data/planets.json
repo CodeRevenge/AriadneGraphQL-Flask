@@ -1,0 +1,42 @@
+[
+  {
+    "_id": 0,
+    "name": "Mercurio",
+    "typeId": [0, 1]
+  },
+  {
+    "_id": 1,
+    "name": "Venus",
+    "typeId": [0, 1]
+  },
+  {
+    "_id": 2,
+    "name": "Tierra",
+    "typeId": [0, 1]
+  },
+  {
+    "_id": 3,
+    "name": "Marte",
+    "typeId": [0, 1]
+  },
+  {
+    "_id": 4,
+    "name": "Jupiter",
+    "typeId": [2, 3]
+  },
+  {
+    "_id": 5,
+    "name": "Saturno",
+    "typeId": [2, 3]
+  },
+  {
+    "_id": 6,
+    "name": "Urano",
+    "typeId": [2, 3]
+  },
+  {
+    "_id": 7,
+    "name": "Neptuno",
+    "typeId": [2, 3]
+  }
+]
