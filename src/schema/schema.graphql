@@ -1,0 +1,43 @@
+type Query {
+  planets: [Planet]
+  planetTypes: [PlanetType]
+  planet(_id: ID!): Planet
+  stars: [Star]
+  galaxies: [Galaxy]
+}
+
+type Mutation {
+  addPlanet(addPlanet: AddPlanetInput!): Planet
+}
+
+input AddPlanetInput {
+  name: String!
+  planetType: [ID!]
+  star: ID!
+  galaxy: ID!
+}
+
+type Planet {
+  _id: ID!
+  name: String!
+  planetType: [PlanetType]
+  star: Star
+  galaxy: Galaxy
+}
+
+type PlanetType {
+  _id: ID!
+  name: String
+}
+
+type Star {
+  _id: ID!
+  name: String
+  system: String
+  galaxy: Galaxy
+}
+
+type Galaxy {
+  _id: ID!
+  name: String
+}

@@ -2,8 +2,11 @@ from ariadne import graphql_sync
 from ariadne.constants import PLAYGROUND_HTML
 from flask import Flask, request, jsonify
 from schema import schema
+import os
 
 app = Flask(__name__)
+PORT = os.environ.get("PORT", 3020)
+DEBUG = False if os.environ.get("DEBUG", True) == "False" else True
 
 
 @app.route("/graphql", methods=["GET"])
@@ -26,8 +29,7 @@ def graphql_server():
         schema,
         data,
         context_value=request,
-        debug=app.debug,
-		logger=False
+        debug=DEBUG,
     )
 
     status_code = 200 if success else 400
@@ -35,4 +37,4 @@ def graphql_server():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=DEBUG, host='0.0.0.0', port=int(PORT))
